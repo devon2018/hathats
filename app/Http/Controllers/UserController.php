@@ -44,7 +44,7 @@ class UserController extends Controller
     public function store(RegisterUserForMembershipIdForm $form, GoodTillRepository $goodTillRepository)
     {
         return response()->json([
-            'success' => !$form->save($goodTillRepository)
+            'success' => !!$form->save($goodTillRepository)
         ], 201);
     }
 }
