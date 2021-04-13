@@ -31,7 +31,7 @@ class UserController extends Controller
         if (count($matches)) {
             return response()->json(['valid' => true]);
         } else {
-            return abort(404, 'The QR code membership number is invalid');
+            return abort(404, 'Oops, something has not gone to plan. This QR Code has either: been linked to an email address already, has another membership number linked to it, or the membership number is invalid.  Please try logging in with your email address by using the light blue login button.  If the issue continues, please email rewards@hathats.co.uk and we\'ll get things sorted!');
         }
     }
 
